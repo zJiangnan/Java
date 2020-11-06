@@ -52,7 +52,7 @@ public class ZipInputStreamTest {
         while ((len = is.read(b)) != -1) {
             fos.write(b, 0, len);
         }
-        System.out.println("解压成功");
+        System.out.println("文件解压成功");
 //        关闭
         fos.close();
         is.close();
