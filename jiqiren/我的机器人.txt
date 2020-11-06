@@ -1,0 +1,3 @@
+ApiKey=1a0e3a1969043992298f2d81d8e47689
+ApiSecret=q5r0kk7n9fiq
+path=http://i.itpk.cn/api.php
