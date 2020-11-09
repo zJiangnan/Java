@@ -9,8 +9,10 @@ import java.security.MessageDigest;
  * @Date:2020/8/4 or 9:03
  */
 public class Join extends JFrame {
-    private Thread ta;
-    private Thread tb;
+//    创建两个进程
+    private Thread ta = null;
+    private Thread tb = null;
+//    创建两个进度条
     final JProgressBar p1 = new JProgressBar();
     final JProgressBar p2 = new JProgressBar();
     int c = 0;
@@ -43,7 +45,7 @@ public class Join extends JFrame {
 
         //设置两进度条位置
         getContentPane().add(p1, BorderLayout.NORTH);//第一个进度条在北边
-        getContentPane().add(p2, BorderLayout.SOUTH);//第一个进度条在南边
+        getContentPane().add(p2, BorderLayout.SOUTH);//第二个进度条在南边
         p1.setStringPainted(true);          //显示进度条数字
         p2.setStringPainted(true);
 
@@ -69,7 +71,7 @@ public class Join extends JFrame {
                 }
             }
         });
-        ta.start();//在构造函数被调用时-启动线程A
+        ta.start();//在构造方法被调用时-启动线程A
         //线程B
         tb = new Thread(new Runnable() {
             int c = 0;
@@ -97,6 +99,6 @@ public class Join extends JFrame {
                 }
             }
         });
-        tb.start();//在构造函数被调用时-启动线程B
+        tb.start();//在构造方法被调用时-启动线程B
     }
 }
